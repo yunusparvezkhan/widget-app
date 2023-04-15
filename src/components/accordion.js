@@ -1,17 +1,17 @@
 import React from 'react'
-import "semantic-ui-css/semantic.min.css";
+
 
 const Accordion = ({ items }) => {
 
     const render = items.map(item => {
         return (
-            <div>
+            <div key={item.title}>
                 <div className='title active' >
                     <i className='dropdown icon' />
-                    {item.question}
+                    {item.title}
                 </div>
                 <div className='content active' >
-                    <p> {item.answer} </p>
+                    <p> {item.content} </p>
                 </div>
             </div>
         )
@@ -19,7 +19,7 @@ const Accordion = ({ items }) => {
 
 
     return (
-        <div>
+        <div className='ui styled accordion'>
             {render}
         </div>
     )
