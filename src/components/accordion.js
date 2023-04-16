@@ -5,7 +5,6 @@ const Accordion = ({ items }) => {
     const [activeIndex, setActiveIndex] = useState(null);
 
     const onTitleClick = (i) => {
-        console.log('No. ', i, ' Title clicked');
         activeIndex !== i ? setActiveIndex(i) : setActiveIndex(null);
     }
 
@@ -27,13 +26,10 @@ const Accordion = ({ items }) => {
 
     return (
         <div>
-            <div className='ui styled accordion'>
-                {render}
-            </div>
             <center>
-                <h1>
-                    {activeIndex}
-                </h1>
+                <div className='ui styled accordion'>
+                    {render}
+                </div>
             </center>
         </div>
     )
