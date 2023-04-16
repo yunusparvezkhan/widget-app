@@ -26,11 +26,9 @@ const Accordion = ({ items }) => {
 
     return (
         <div>
-            <center>
-                <div className='ui styled accordion'>
-                    {render}
-                </div>
-            </center>
+            <div className='ui styled accordion'>
+                {render}
+            </div>
         </div>
     )
 }

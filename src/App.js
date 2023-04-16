@@ -33,7 +33,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <Accordion items={items} />
+      <center>
+        <Accordion items={items} />
+      </center>
     </div>
   );
 }
