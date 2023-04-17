@@ -1,0 +1,2 @@
+## Version 1 
+Version 1 of the widget app contains a list of accordions of Srimad Bhagavatam Slokas. Whenever a title is clicked, the sloka expands from below. Whenever any other title is clicked, that sloka expands and previously opened sloka shrinks. When an open sloka's title is clicked, the sloka shrinks back.
