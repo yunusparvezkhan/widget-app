@@ -13,7 +13,7 @@ const App = () => {
         <button onClick={() => { setActivepage('accordion') }} >Accordion</button>
         <button onClick={() => { setActivepage('search') }} >Search</button>
         <div>
-          {activepage == 'search' ? <Search /> : <Accordion items={items} />}
+          {activepage === 'search' ? <Search /> : <Accordion items={items} />}
         </div>
       </center>
     </div>
