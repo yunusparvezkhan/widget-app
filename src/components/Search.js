@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 const Search = () => {
     const [searchTerm, setSearchTerm] = useState('');
-    console.log(searchTerm);
 
     useEffect(() => {
         console.log("useeffect console log")
