@@ -6,11 +6,10 @@ const Search = () => {
     const [searchResult, setSearchResult] = useState([]);
 
     useEffect(() => {
-        console.log("useeffect console log");
         (async () => {
             const result = await axios.get(`https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&origin=*&srsearch=${searchTerm}`)
-            setSearchResult(result.data.query.search ? result.data.query.search : '');
-            console.log(searchResult);
+            const filteredsearchresult = result.data.query.search ? result.data.query.search : '';
+            setSearchResult(filteredsearchresult);
 
         })();
     }, [searchTerm])
