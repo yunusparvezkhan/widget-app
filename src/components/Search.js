@@ -21,9 +21,9 @@ const Search = () => {
             <div className='ui list item' key={r.pageid} >
                 <div className='content'>
                     <h5 className='header'>{r.title}</h5>
-                    {r.snippet}
+                    <span dangerouslySetInnerHTML={{ __html: r.snippet }}></span>
                 </div>
-            </div>
+            </div >
         )
     })
 
