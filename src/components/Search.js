@@ -18,7 +18,7 @@ const Search = () => {
         return (
             <div className='ui list item' key={r.pageid} >
                 <div className='right floated content'>
-                    <a target='_blank' className='ui button' href={`https://wikipedia.com/wiki/${r.title}`} >Open Page</a>
+                    <a target='_blank' className='ui button' href={`https://en.wikipedia.org/?curid=${r.pageid}`} >Open Page</a>
                 </div>
                 <div className='content'>
                     <h5 className='header'>{r.title}</h5>
