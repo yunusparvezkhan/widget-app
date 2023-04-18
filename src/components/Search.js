@@ -7,7 +7,15 @@ const Search = () => {
 
     useEffect(() => {
         const getresult = async () => {
-            const result = await axios.get(`https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&origin=*&srsearch=${searchTerm}`)
+            const result = await axios.get('https://en.wikipedia.org/w/api.php', {
+                params: {
+                    action: 'query',
+                    list: 'search',
+                    format: 'json',
+                    origin: '*',
+                    srsearch: searchTerm
+                }
+            })
             const filteredsearchresult = result.data.query.search ? result.data.query.search : '';
             setSearchResult(filteredsearchresult);
         };
