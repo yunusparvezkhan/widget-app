@@ -1,2 +1,5 @@
 ## Version 1 
 Version 1 of the widget app contains a list of accordions of Srimad Bhagavatam Slokas. Whenever a title is clicked, the sloka expands from below. Whenever any other title is clicked, that sloka expands and previously opened sloka shrinks. When an open sloka's title is clicked, the sloka shrinks back.
+
+## Version 2
+Version 2 of the widget app contains a decent and basic navigation bar, to hover to accordion page and search page. The accordion page contains all the previous version's functionality and the search page contains a search bar and no submit button. Whenever user types some keyword on the searchbar and stops typing for 300ms, the app sends a request to the wikipedia api and gets back a object as result. A array inside that object contains the titles and description (aka snippet). The title and snippets are displayed in the page in the form of a list using map method. The snippet prop of the object contains html, hence that is displayed using the dangerouslySetInnerHTML prop of jsx span tag. At last a anchor tag is added with some style to route the user to the actual wikipedia page.
