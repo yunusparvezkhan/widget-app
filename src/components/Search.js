@@ -19,6 +19,9 @@ const Search = () => {
     const results = searchResult.map((r) => {
         return (
             <div className='ui list item' key={r.pageid} >
+                <div className='right floated content'>
+                    <a target='_blank' href={`https://wikipedia.com/wiki/${r.title}`} >Open Page</a>
+                </div>
                 <div className='content'>
                     <h5 className='header'>{r.title}</h5>
                     <span dangerouslySetInnerHTML={{ __html: r.snippet }}></span>
