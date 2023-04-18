@@ -6,11 +6,10 @@ const Search = () => {
 
     useEffect(() => {
         console.log("useeffect console log");
-        const search = async () => {
+        (async () => {
             const searchresult = await axios.get(`https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&origin=*&srsearch=${searchTerm}`)
             console.log(searchresult);
-        };
-        search();
+        })();
     }, [searchTerm])
 
     return (
