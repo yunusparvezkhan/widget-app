@@ -3,12 +3,15 @@ import axios from 'axios';
 
 const Search = () => {
     const [searchTerm, setSearchTerm] = useState('');
+    const [searchResult, setSearchResult] = useState({});
 
     useEffect(() => {
         console.log("useeffect console log");
         (async () => {
-            const searchresult = await axios.get(`https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&origin=*&srsearch=${searchTerm}`)
-            console.log(searchresult);
+            const result = await axios.get(`https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&origin=*&srsearch=${searchTerm}`)
+            setSearchResult(result);
+            console.log(searchResult);
+
         })();
     }, [searchTerm])
 
