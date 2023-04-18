@@ -10,7 +10,6 @@ const Search = () => {
             const result = await axios.get(`https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&origin=*&srsearch=${searchTerm}`)
             const filteredsearchresult = result.data.query.search ? result.data.query.search : '';
             setSearchResult(filteredsearchresult);
-
         })();
     }, [searchTerm])
 
@@ -19,7 +18,7 @@ const Search = () => {
         return (
             <div className='ui list item' key={r.pageid} >
                 <div className='right floated content'>
-                    <a target='_blank' href={`https://wikipedia.com/wiki/${r.title}`} >Open Page</a>
+                    <a target='_blank' className='ui button' href={`https://wikipedia.com/wiki/${r.title}`} >Open Page</a>
                 </div>
                 <div className='content'>
                     <h5 className='header'>{r.title}</h5>
