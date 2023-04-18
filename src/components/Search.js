@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Search = () => {
-    const [searchTerm, setSearchTerm] = useState("");
+    const [searchTerm, setSearchTerm] = useState('');
     console.log(searchTerm);
+
+    useEffect(() => {
+        console.log("useeffect console log")
+    }, [searchTerm])
+
     return (
         <div className='ui segment' style={{ maxWidth: '80%' }}>
             <h1>Search</h1>
