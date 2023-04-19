@@ -6,7 +6,7 @@ import Dropdown from "./components/Dropdown";
 import dropdownoptions from './data/Dropdown-data.js'
 
 const App = () => {
-  const [activepage, setActivepage] = useState('dropdown');
+  const [activepage, setActivepage] = useState('search');
   const [selectedop, setSelectedop] = useState({ label: 'Select', value: '#202020' });
 
 
