@@ -3,3 +3,6 @@ Version 1 of the widget app contains a list of accordions of Srimad Bhagavatam S
 
 ## Version 2
 Version 2 of the widget app contains a decent and basic navigation bar, to hover to accordion page and search page. The accordion page contains all the previous version's functionality and the search page contains a search bar and no submit button. Whenever user types some keyword on the searchbar and stops typing for 300ms, the app sends a request to the wikipedia api and gets back a object as result. A array inside that object contains the titles and description (aka snippet). The title and snippets are displayed in the page in the form of a list using map method. The snippet prop of the object contains html, hence that is displayed using the dangerouslySetInnerHTML prop of jsx span tag. At last a anchor tag is added with some style to route the user to the actual wikipedia page.
+
+## Version 3
+Version 3 of the widget app contains another page called the Dropdown page. In this page user gets one dropdown menu, which if clicked indeed a dropdown menu appears. User then gets some color options to choose. According to user's selection, the box below the dropdown segment changes the color. Whenever the menu opens, the box goes down and unhides itself from the menu. Whenever the menu is open and the user clicks anywhere outside the form, the menu closes.
