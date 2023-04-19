@@ -1,23 +1,23 @@
 const dropdownoptions = [
     {
-        label: 'Option 1',
-        value: 'op1'
+        label: 'Confusion Maker Blureen',
+        value: '#11cbd1'
     },
     {
-        label: 'Option 2',
-        value: 'op2'
+        label: 'Blue 😈',
+        value: '#1c37ff'
     },
     {
-        label: 'Option 3',
-        value: 'op3'
+        label: 'Velvet Red',
+        value: '#e62222'
     },
     {
-        label: 'Option 4',
-        value: 'op4'
+        label: 'Parrot Green 🦜',
+        value: '#a4c928'
     },
     {
-        label: 'Option 5',
-        value: 'op5'
+        label: 'Bhagwa Orenge 🛕🚩',
+        value: '#f08b11'
     }
 ];
 export default dropdownoptions;

@@ -7,7 +7,7 @@ import dropdownoptions from './data/Dropdown-data.js'
 
 const App = () => {
   const [activepage, setActivepage] = useState('dropdown');
-  const [selectedop, setSelectedop] = useState({ label: 'Select', value: 'Select' });
+  const [selectedop, setSelectedop] = useState({ label: 'Select', value: '#202020' });
 
 
   return (

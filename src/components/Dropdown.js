@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import '../styles/Dropdown.css';
 
 const Dropdown = ({ options, selectedop, onSelectedopChange }) => {
     const [menustate, setMenustate] = useState('');
@@ -53,6 +54,8 @@ const Dropdown = ({ options, selectedop, onSelectedopChange }) => {
                     </div>
                 </div>
             </div>
+
+            <div className='color-box' style={{ backgroundColor: selectedop.value }}></div>
         </div >
     )
 }
