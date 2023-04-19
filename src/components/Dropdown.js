@@ -5,13 +5,20 @@ const Dropdown = ({ options, selectedop, onSelectedopChange }) => {
     const formref = useRef();
 
     useEffect(() => {
-        document.body.addEventListener('click', (e) => {
+
+        const onBodyClick = (e) => {
             if (formref.current.contains(e.target)) {
                 return;
             } else {
                 setMenustate('');
             }
-        })
+        }
+
+        document.body.addEventListener('click', onBodyClick)
+
+        return () => {
+            document.body.removeEventListener('click', onBodyClick)
+        }
     }, [])
 
 
