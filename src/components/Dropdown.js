@@ -3,6 +3,7 @@ import '../styles/Dropdown.css';
 
 const Dropdown = ({ options, selectedop, onSelectedopChange }) => {
     const [menustate, setMenustate] = useState('');
+    const [colorboxtop, setColorboxtop] = useState('0px');
     const formref = useRef();
 
     useEffect(() => {
@@ -44,7 +45,12 @@ const Dropdown = ({ options, selectedop, onSelectedopChange }) => {
                 <label className='label'>Select an option</label>
                 <div ref={formref} className='ui form'>
                     <div className='field'>
-                        <div className={`ui selection dropdown ${menustate}`} onClick={() => { menustate == '' ? setMenustate('visible transition active') : setMenustate('') }} >
+
+                        <div className={`ui selection dropdown ${menustate}`} onClick={() => {
+                            menustate == '' ? setMenustate('visible transition active') : setMenustate('');
+                            menustate == '' ? setColorboxtop('250px') : setColorboxtop('0px');
+                        }} >
+
                             <i className='dropdown icon' />
                             <div className='text'>{selectedop.label}</div>
                             <div className={`menu ${menustate}`}>
@@ -54,8 +60,7 @@ const Dropdown = ({ options, selectedop, onSelectedopChange }) => {
                     </div>
                 </div>
             </div>
-
-            <div className='color-box' style={{ backgroundColor: selectedop.value }}></div>
+            <div className='color-box' style={{ backgroundColor: selectedop.value, top: colorboxtop }}></div>
         </div >
     )
 }
