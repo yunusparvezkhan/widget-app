@@ -24,17 +24,17 @@ const Dropdown = ({ options, selectedop, onSelectedopChange }) => {
                 <div className='ui form'>
                     <div className='field'>
                         <label className='label'>Select an option</label>
-                        <div className='ui selection dropdown visible' onClick={() => { menustate == '' ? setMenustate('visible') : setMenustate('') }} >
+                        <div className={`ui selection dropdown ${menustate}`} onClick={() => { menustate == '' ? setMenustate('visible transition active') : setMenustate('') }} >
                             <i className='dropdown icon' />
                             <div className='text'>{selectedop.label}</div>
-                            <div className={`menu ${menustate} transition`}>
+                            <div className={`menu ${menustate}`}>
                                 {optionmapping}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
