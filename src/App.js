@@ -7,6 +7,8 @@ import Dropdown from "./components/Dropdown";
 
 const App = () => {
   const [activepage, setActivepage] = useState('dropdown');
+  const [selectedop, setSelectedop] = useState('Select');
+
 
   const dropdownoptions = [
     {
@@ -40,7 +42,7 @@ const App = () => {
         <div>
           {activepage === 'search' ? <Search /> : ''}
           {activepage === 'accordion' ? <Accordion items={items} /> : ''}
-          {activepage === 'dropdown' ? <Dropdown options={dropdownoptions} /> : ''}
+          {activepage === 'dropdown' ? <Dropdown options={dropdownoptions} selectedop={selectedop} setSelectedop={setSelectedop} /> : ''}
         </div>
       </center>
     </div>

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-const Dropdown = ({ options }) => {
+const Dropdown = ({ options, selectedop, setSelectedop }) => {
     const [menustate, setMenustate] = useState('');
-    const [selectedop, setSelectedop] = useState('Select');
+    // const [selectedop, setSelectedop] = useState('Select');
 
     const optionmapping = options.map((option) => {
         return (
