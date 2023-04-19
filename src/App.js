@@ -19,7 +19,7 @@ const App = () => {
         <div>
           {activepage === 'search' ? <Search /> : ''}
           {activepage === 'accordion' ? <Accordion items={items} /> : ''}
-          {activepage === 'dropdown' ? <Dropdown options={dropdownoptions} selectedop={selectedop} setSelectedop={setSelectedop} /> : ''}
+          {activepage === 'dropdown' ? <Dropdown options={dropdownoptions} selectedop={selectedop} onSelectedopChange={setSelectedop} /> : ''}
         </div>
       </center>
     </div>
