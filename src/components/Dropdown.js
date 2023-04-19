@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 
 const Dropdown = ({ options, selectedop, onSelectedopChange }) => {
     const [menustate, setMenustate] = useState('');
-    // const [selectedop, setSelectedop] = useState('Select');
 
     const optionmapping = options.map((option) => {
-        if (option.value === selectedop.value) {
-            return null;
-        }
+
+        // Uncomment the code below to remove the selected option from the rendered list
+        // if (option.value === selectedop.value) {
+        //     return null;
+        // }
+
         return (
             <div className='ui list item' key={option.value} onClick={() => { onSelectedopChange(option); setMenustate('') }} >
                 <div >{option.label}</div>
