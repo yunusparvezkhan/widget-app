@@ -5,8 +5,11 @@ const Dropdown = ({ options, selectedop, onSelectedopChange }) => {
     // const [selectedop, setSelectedop] = useState('Select');
 
     const optionmapping = options.map((option) => {
+        if (option.value === selectedop.value) {
+            return null;
+        }
         return (
-            <div className='ui list item' key={option.value} onClick={() => { onSelectedopChange(option.label); setMenustate('') }} >
+            <div className='ui list item' key={option.value} onClick={() => { onSelectedopChange(option); setMenustate('') }} >
                 <div >{option.label}</div>
             </div >
         )
@@ -21,7 +24,7 @@ const Dropdown = ({ options, selectedop, onSelectedopChange }) => {
                         <label className='label'>Select an option</label>
                         <div className='ui selection dropdown visible' onClick={() => { menustate == '' ? setMenustate('visible') : setMenustate('') }} >
                             <i className='dropdown icon' />
-                            <div className='text'>{selectedop}</div>
+                            <div className='text'>{selectedop.label}</div>
                             <div className={`menu ${menustate} transition`}>
                                 {optionmapping}
                             </div>
