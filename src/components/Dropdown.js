@@ -6,7 +6,7 @@ const Dropdown = ({ options, selectedop, onSelectedopChange }) => {
 
     const optionmapping = options.map((option) => {
         return (
-            <div className='ui list item' key={option.value} onClick={() => { onSelectedopChange(option.label) }} >
+            <div className='ui list item' key={option.value} onClick={() => { onSelectedopChange(option.label); setMenustate('') }} >
                 <div >{option.label}</div>
             </div >
         )
