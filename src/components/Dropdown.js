@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-const Dropdown = ({ options, selectedop, setSelectedop }) => {
+const Dropdown = ({ options, selectedop, onSelectedopChange }) => {
     const [menustate, setMenustate] = useState('');
     // const [selectedop, setSelectedop] = useState('Select');
 
     const optionmapping = options.map((option) => {
         return (
-            <div className='ui list item' key={option.value}>
-                <div onClick={() => { setSelectedop(option.label) }} >{option.label}</div>
+            <div className='ui list item' key={option.value} onClick={() => { onSelectedopChange(option.label) }} >
+                <div >{option.label}</div>
             </div >
         )
     })
