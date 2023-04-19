@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 
 const Dropdown = ({ options }) => {
     const [menustate, setMenustate] = useState('');
+    const [selectedop, setSelectedop] = useState('Select');
 
     const optionmapping = options.map((option) => {
         return (
             <div className='ui list item' key={option.value}>
-                <h4>{option.label}</h4>
-            </div>
+                <div onClick={() => { setSelectedop(option.label) }} >{option.label}</div>
+            </div >
         )
     })
 
@@ -20,7 +21,7 @@ const Dropdown = ({ options }) => {
                         <label className='label'>Select an option</label>
                         <div className='ui selection dropdown visible' onClick={() => { menustate == '' ? setMenustate('visible') : setMenustate('') }} >
                             <i className='dropdown icon' />
-                            <div className='text'>Select</div>
+                            <div className='text'>{selectedop}</div>
                             <div className={`menu ${menustate} transition`}>
                                 {optionmapping}
                             </div>
