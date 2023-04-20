@@ -1,7 +1,6 @@
 # widget-app
 Widget App is a very simple practice app of React Hooks systems. Simply there will be some questions and whenever those are clicked, the answers will expand below. Whenever another question is clicked, previous answer will shrink and that answer will expand below. This is a application practice of ReactJS hooks system and functional programming.
 
-
 ## Install in your Development Setup
 To install the widget-app in your local development setup, please follow the next steps. Skip the installations, which are already installed in your machine.
 
