@@ -17,6 +17,12 @@
 
  This Commit title represents that Version 4 is in Development right now, and in the development process so far, one major change have been commited and follwing that change 8 small changes have been commited.
 
+ Following any update, if any very minor change is commited, such as spelling mistakes or something mistekenly forgotten, then that commit might have a index following a . (dot) after the version number.
+
+ `Example` => `v4 Delta 2.1.1`
+
+ This commit suggests that some very small change is commited following the  `v4 Delta 2.1`  commit.
+
 ### On Devnotes update
 
 `v[version under development] echo mic [index of devnotes update]`
