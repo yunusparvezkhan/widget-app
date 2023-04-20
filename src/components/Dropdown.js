@@ -39,28 +39,23 @@ const Dropdown = ({ options, selectedop, onSelectedopChange, onColorboxtopChange
     })
 
     return (
-        <div>
-            <div className='ui segment' style={{ maxWidth: '80%' }} >
-                <h1>Dropdown</h1>
-                <label className='label'>Select an option</label>
-                <div ref={formref} className='ui form'>
-                    <div className='field'>
+        <div ref={formref} className='ui form'>
+            <label className='label'>Select an option</label>
+            <div className='field'>
 
-                        <div className={`ui selection dropdown ${menustate}`} onClick={() => {
-                            menustate == '' ? setMenustate('visible transition active') : setMenustate('');
-                            menustate == '' ? onColorboxtopChange('250px') : onColorboxtopChange('0px');
-                        }} >
+                <div className={`ui selection dropdown ${menustate}`} onClick={() => {
+                    menustate == '' ? setMenustate('visible transition active') : setMenustate('');
+                    menustate == '' ? onColorboxtopChange('250px') : onColorboxtopChange('0px');
+                }} >
 
-                            <i className='dropdown icon' />
-                            <div className='text'>{selectedop.label}</div>
-                            <div className={`menu ${menustate}`}>
-                                {optionmapping}
-                            </div>
-                        </div>
+                    <i className='dropdown icon' />
+                    <div className='text'>{selectedop.label}</div>
+                    <div className={`menu ${menustate}`}>
+                        {optionmapping}
                     </div>
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 

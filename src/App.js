@@ -21,12 +21,18 @@ const App = () => {
         <button onClick={() => { setActivepage('translate') }} >Translate</button>
         <div>
           {activepage === 'search' ? <Search /> : ''}
+
           {activepage === 'accordion' ? <Accordion items={items} /> : ''}
+
           {activepage === 'dropdown' ?
             <div>
-              <Dropdown options={dropdownoptions} selectedop={selectedop} onSelectedopChange={setSelectedop} onColorboxtopChange={setColorboxtop} />
+              <div className='ui segment' style={{ maxWidth: '80%' }} >
+                <h1>Dropdown</h1>
+                <Dropdown options={dropdownoptions} selectedop={selectedop} onSelectedopChange={setSelectedop} onColorboxtopChange={setColorboxtop} />
+              </div>
               <div className='color-box' style={{ backgroundColor: selectedop.value, top: colorboxtop }}></div>
             </div> : ''}
+
           {activepage === 'translate' ? <Translate /> : ''}
         </div>
       </center>
