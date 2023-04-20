@@ -24,7 +24,8 @@ Widget App is a very simple practice app of React Hooks systems. Simply there wi
 
 ### On Devnotes update
 
-`v[version under development] echo [index of devnotes update]`
+`v[version under development] echo mic [index of devnotes update]`
+
 `Example` => `v4 echo mic 1`
 
 
