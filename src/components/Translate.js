@@ -22,7 +22,7 @@ const options = [
 
 const Translate = () => {
     const [language, setLanguage] = useState(options[0]);
-    const [bugfixingstate, setBugfixingstate] = useState('0px'); // Ignore this state, this one is made to keep up with the nroms of the Dropdown component. Also ignore the prop where this state setter is passed.
+    const [bugfixingstate, setBugfixingstate] = useState('0px'); // Ignore this state, this one is made to keep up with the norms of the Dropdown component. Also ignore the prop where this state setter is passed.
     const [text, setText] = useState('');
 
     return (
