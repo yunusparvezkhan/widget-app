@@ -5,6 +5,7 @@ import Search from "./components/Search";
 import Dropdown from "./components/Dropdown";
 import dropdownoptions from './data/Dropdown-data.js'
 import Translate from "./components/Translate";
+import './styles/StyleLib.css'
 
 const App = () => {
   const [activepage, setActivepage] = useState('translate');
@@ -20,20 +21,20 @@ const App = () => {
         <button onClick={() => { setActivepage('dropdown') }} >Dropdown</button>
         <button onClick={() => { setActivepage('translate') }} >Translate</button>
         <div>
-          {activepage === 'search' ? <Search /> : ''}
+          {activepage === 'search' ? <div className='eighty page-body' > <Search /></div> : ''}
 
-          {activepage === 'accordion' ? <Accordion items={items} /> : ''}
+          {activepage === 'accordion' ? <div className='eighty page-body'><Accordion items={items} /></div> : ''}
 
           {activepage === 'dropdown' ?
-            <div>
-              <div className='ui segment' style={{ maxWidth: '80%' }} >
-                <h1>Dropdown</h1>
+            <div className="eighty page-body">
+              <h1>Dropdown</h1>
+              <div className='ui segment' >
                 <Dropdown options={dropdownoptions} selectedop={selectedop} onSelectedopChange={setSelectedop} onColorboxtopChange={setColorboxtop} />
               </div>
               <div className='color-box' style={{ backgroundColor: selectedop.value, top: colorboxtop }}></div>
             </div> : ''}
 
-          {activepage === 'translate' ? <Translate /> : ''}
+          {activepage === 'translate' ? <div className='eighty page-body'><Translate /></div> : ''}
         </div>
       </center>
     </div>

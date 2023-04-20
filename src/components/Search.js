@@ -49,7 +49,7 @@ const Search = () => {
 
     return (
         <div>
-            <div className='ui segment' style={{ maxWidth: '80%' }}>
+            <div className='ui segment'>
                 <h1>Search</h1>
                 <div className='ui form'>
                     <div className='field'>

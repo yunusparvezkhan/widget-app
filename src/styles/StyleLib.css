@@ -1,0 +1,12 @@
+.eighty {
+    width: 80%;
+}
+
+.page-header {
+    position: relative;
+}
+
+.page-body {
+    position: relative;
+    top: 20px;
+}
