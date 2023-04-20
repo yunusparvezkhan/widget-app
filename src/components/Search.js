@@ -50,7 +50,6 @@ const Search = () => {
     return (
         <div>
             <div className='ui segment'>
-                <h1>Search</h1>
                 <div className='ui form'>
                     <div className='field'>
                         <label>Type your query</label>

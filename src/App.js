@@ -21,7 +21,10 @@ const App = () => {
         <button onClick={() => { setActivepage('dropdown') }} >Dropdown</button>
         <button onClick={() => { setActivepage('translate') }} >Translate</button>
         <div>
-          {activepage === 'search' ? <div className='eighty page-body' > <Search /></div> : ''}
+          {activepage === 'search' ? <div className='eighty page-body' >
+            <h1>Search</h1>
+            <Search />
+          </div> : ''}
 
           {activepage === 'accordion' ? <div className='eighty page-body'><Accordion items={items} /></div> : ''}
 
