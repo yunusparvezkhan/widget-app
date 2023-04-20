@@ -110,7 +110,8 @@ To install the widget-app in your local development setup, please follow the nex
 </ol>
 
 
-## Standard Commit Notations
+<br><br>
+# Standard Commit Notations
 ### On Version Release
 
 `Version [Version number] Release`
