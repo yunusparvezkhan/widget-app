@@ -22,7 +22,6 @@ const Translate = () => {
 
     return (
         <div>
-            <h1 className='page-header'>Translate</h1>
             <div className='ui segment'>
                 <Dropdown options={options} selectedop={selectedop} onSelectedopChange={setSelectedop} onColorboxtopChange={setBugfixingstate} />
             </div>

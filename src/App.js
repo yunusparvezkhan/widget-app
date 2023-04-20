@@ -40,7 +40,10 @@ const App = () => {
               <div className='color-box' style={{ backgroundColor: selectedop.value, top: colorboxtop }}></div>
             </div> : ''}
 
-          {activepage === 'translate' ? <div className='eighty page-body'><Translate /></div> : ''}
+          {activepage === 'translate' ? <div className='eighty page-body'>
+            <h1 className='page-header'>Translate</h1>
+            <Translate />
+          </div> : ''}
         </div>
       </center>
     </div>
