@@ -1,3 +1,5 @@
+// AIzaSyCHUCmpr7ct_yDFHC98CZJy2LTms-IwDlM
+// Google translate API Private key
 import React, { useState } from 'react'
 import Dropdown from './Dropdown'
 import '../styles/Translate.css'
