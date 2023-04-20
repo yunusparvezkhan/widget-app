@@ -2,6 +2,7 @@
 // Google translate API Private key
 import React, { useState } from 'react'
 import Dropdown from './Dropdown'
+import Convert from './Convert'
 import '../styles/Translate.css'
 
 const options = [
@@ -42,7 +43,12 @@ const Translate = () => {
                         onColorboxtopChange={setBugfixingstate}
                     />
                 </div>
+                <div className='translation-result-box'>
+                    <Convert language={language} text={text} />
+                </div>
+
             </div>
+
         </div>
     )
 }
