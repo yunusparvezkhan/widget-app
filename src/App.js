@@ -35,7 +35,7 @@ const App = () => {
             <div className="eighty page-body">
               <h1>Dropdown</h1>
               <div className='ui segment' >
-                <Dropdown options={dropdownoptions} selectedop={selectedop} onSelectedopChange={setSelectedop} onColorboxtopChange={setColorboxtop} />
+                <Dropdown selectionlabel={'Select an Option'} options={dropdownoptions} selectedop={selectedop} onSelectedopChange={setSelectedop} onColorboxtopChange={setColorboxtop} />
               </div>
               <div className='color-box' style={{ backgroundColor: selectedop.value, top: colorboxtop }}></div>
             </div> : ''}

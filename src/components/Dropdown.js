@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import '../styles/Dropdown.css';
 
-const Dropdown = ({ options, selectedop, onSelectedopChange, onColorboxtopChange }) => {
+const Dropdown = ({ options, selectedop, onSelectedopChange, onColorboxtopChange, selectionlabel }) => {
     const [menustate, setMenustate] = useState('');
     // const [colorboxtop, setColorboxtop] = useState('0px');
     const formref = useRef();
@@ -40,7 +40,7 @@ const Dropdown = ({ options, selectedop, onSelectedopChange, onColorboxtopChange
 
     return (
         <div ref={formref} className='ui form'>
-            <label className='label'>Select an option</label>
+            <label className='label'>{selectionlabel}</label>
             <div className='field'>
 
                 <div className={`ui selection dropdown ${menustate}`} onClick={() => {
