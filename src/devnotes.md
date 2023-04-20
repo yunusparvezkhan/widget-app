@@ -27,7 +27,13 @@ This Commit title repressents that while Version 4 of the app is in Development 
 
 ### On Readme.md update
 
+`Readme update v[version currently under development] n[index of readme update] ` => **Used Currently**
+
+Previously this type of commits are done as 
+
 `README update v[version currently under development] #[index of readme update] `
+
+Note:- The first Notation is used currently
 
 then as the extended description 
 
