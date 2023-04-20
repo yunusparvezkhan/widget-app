@@ -26,7 +26,10 @@ const App = () => {
             <Search />
           </div> : ''}
 
-          {activepage === 'accordion' ? <div className='eighty page-body'><Accordion items={items} /></div> : ''}
+          {activepage === 'accordion' ? <div className='eighty page-body'>
+            <h1 className='page-header'>Srimad Bhagavatam Slokas</h1>
+            <Accordion items={items} />
+          </div> : ''}
 
           {activepage === 'dropdown' ?
             <div className="eighty page-body">
