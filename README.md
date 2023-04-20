@@ -29,6 +29,21 @@ Widget App is a very simple practice app of React Hooks systems. Simply there wi
 `Example` => `v4 echo mic 1`
 
 
+### On Readme.md update
+
+`Readme update v[version currently under development] n[index of readme update] ` => **Used Currently**
+
+Previously this type of commits are done as 
+
+`README update v[version currently under development] #[index of readme update] `
+
+Note:- The first Notation is used currently
+
+then as the extended description 
+
+`some description`
+
+
 <br><br>
 
 
@@ -145,10 +160,4 @@ To install the widget-app in your local development setup, please follow the nex
 
 This Commit title repressents that while Version 4 of the app is in Development phase, devnotes is updated for some announcement/notification and the index of such announcement/notification is 1.
 
-### On Readme.md update
 
-`README update v[version currently under development] #[index of readme update] `
-
-then as the extended description 
-
-`some description`
