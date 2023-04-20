@@ -7,7 +7,7 @@ import dropdownoptions from './data/Dropdown-data.js'
 import Translate from "./components/Translate";
 
 const App = () => {
-  const [activepage, setActivepage] = useState('search');
+  const [activepage, setActivepage] = useState('translate');
   const [selectedop, setSelectedop] = useState({ label: 'Select', value: '#202020' });
 
 
