@@ -108,3 +108,38 @@ To install the widget-app in your local development setup, please follow the nex
       If you do not see an app coming on the screen, then check your terminal for which port the app is running. Put that port number instead of 3000 in the previous process. If you still do not have the app running check all the above steps and troubleshoot
   </li>
 </ol>
+
+
+## Standard Commit Notations
+### On Version Release
+
+`Version [Version number] Release`
+
+### On Patch/fix/changes (minor/major)
+
+
+`Patch [Version index].[patch index]`
+
+### Development Phase commits
+
+
+`v[version number that is currently being developed] Delta [index of major changes, ie. Component additions].[index of small changes following the major change].`
+
+`Example`  => `v4 Delta 1.8`
+
+ This Commit title represents that Version 4 is in Development right now, and in the development process so far, one major change have been commited and follwing that change 8 small changes have been commited.
+
+### On Devnotes update
+
+`v[version under development] echo [index of devnotes update]`
+`Example` => `v4 echo mic 1`
+
+This Commit title repressents that while Version 4 of the app is in Development phase, devnotes is updated for some announcement/notification and the index of such announcement/notification is 1.
+
+### On Readme.md update
+
+`README update v[version currently under development] #[index of readme update] `
+
+then as the extended description 
+
+`some description`
