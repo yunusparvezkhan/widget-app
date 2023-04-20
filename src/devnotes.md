@@ -19,7 +19,8 @@
 
 ### On Devnotes update
 
-`v[version under development] echo [index of devnotes update]`
+`v[version under development] echo mic [index of devnotes update]`
+
 `Example` => `v4 echo mic 1`
 
 This Commit title repressents that while Version 4 of the app is in Development phase, devnotes is updated for some announcement/notification and the index of such announcement/notification is 1.
