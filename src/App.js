@@ -9,6 +9,7 @@ import Translate from "./components/Translate";
 const App = () => {
   const [activepage, setActivepage] = useState('translate');
   const [selectedop, setSelectedop] = useState({ label: 'Select', value: '#202020' });
+  const [colorboxtop, setColorboxtop] = useState('0px');
 
 
   return (
@@ -21,7 +22,11 @@ const App = () => {
         <div>
           {activepage === 'search' ? <Search /> : ''}
           {activepage === 'accordion' ? <Accordion items={items} /> : ''}
-          {activepage === 'dropdown' ? <Dropdown options={dropdownoptions} selectedop={selectedop} onSelectedopChange={setSelectedop} /> : ''}
+          {activepage === 'dropdown' ?
+            <div>
+              <Dropdown options={dropdownoptions} selectedop={selectedop} onSelectedopChange={setSelectedop} onColorboxtopChange={setColorboxtop} />
+              <div className='color-box' style={{ backgroundColor: selectedop.value, top: colorboxtop }}></div>
+            </div> : ''}
           {activepage === 'translate' ? <Translate /> : ''}
         </div>
       </center>

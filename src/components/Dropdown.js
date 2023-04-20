@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
 import '../styles/Dropdown.css';
 
-const Dropdown = ({ options, selectedop, onSelectedopChange }) => {
+const Dropdown = ({ options, selectedop, onSelectedopChange, onColorboxtopChange }) => {
     const [menustate, setMenustate] = useState('');
-    const [colorboxtop, setColorboxtop] = useState('0px');
+    // const [colorboxtop, setColorboxtop] = useState('0px');
     const formref = useRef();
 
     useEffect(() => {
@@ -48,7 +48,7 @@ const Dropdown = ({ options, selectedop, onSelectedopChange }) => {
 
                         <div className={`ui selection dropdown ${menustate}`} onClick={() => {
                             menustate == '' ? setMenustate('visible transition active') : setMenustate('');
-                            menustate == '' ? setColorboxtop('250px') : setColorboxtop('0px');
+                            menustate == '' ? onColorboxtopChange('250px') : onColorboxtopChange('0px');
                         }} >
 
                             <i className='dropdown icon' />
@@ -60,7 +60,6 @@ const Dropdown = ({ options, selectedop, onSelectedopChange }) => {
                     </div>
                 </div>
             </div>
-            <div className='color-box' style={{ backgroundColor: selectedop.value, top: colorboxtop }}></div>
         </div >
     )
 }
