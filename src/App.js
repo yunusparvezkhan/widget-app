@@ -17,7 +17,7 @@ const App = () => {
     <div className="App">
       <center>
         <button onClick={() => { setActivepage('search') }} >Search</button>
-        <button onClick={() => { setActivepage('accordion') }} >Accordion</button>
+        <button onClick={() => { setActivepage('accordion') }} >ŚB Slokas</button>
         <button onClick={() => { setActivepage('dropdown') }} >Dropdown</button>
         <button onClick={() => { setActivepage('translate') }} >Translate</button>
         <div>
