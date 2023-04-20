@@ -6,3 +6,4 @@ Version 2 of the widget app contains a decent and basic navigation bar, to hover
 
 ## Version 3
 Version 3 of the widget app contains another page called the Dropdown page. In this page user gets one dropdown menu, which if clicked indeed a dropdown menu appears. User then gets some color options to choose. According to user's selection, the box below the dropdown segment changes the color. Whenever the menu opens, the box goes down and unhides itself from the menu. Whenever the menu is open and the user clicks anywhere outside the form, the menu closes.
+
