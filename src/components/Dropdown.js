@@ -40,8 +40,8 @@ const Dropdown = ({ options, selectedop, onSelectedopChange, onColorboxtopChange
 
     return (
         <div ref={formref} className='ui form'>
-            <label className='label'>{selectionlabel}</label>
             <div className='field'>
+                <label className='label'>{selectionlabel}</label>
 
                 <div className={`ui selection dropdown ${menustate}`} onClick={() => {
                     menustate == '' ? setMenustate('visible transition active') : setMenustate('');

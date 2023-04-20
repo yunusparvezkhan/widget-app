@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Dropdown from './Dropdown'
+import '../styles/Translate.css'
 
 const options = [
     {
@@ -22,10 +23,23 @@ const Translate = () => {
     const [text, setText] = useState('');
 
     return (
-        <div>
-            <div className='ui segment translate-root'>
-                <input value={text} onChange={(e) => { setText(e.target.value) }} />
-                <Dropdown selectionlabel={'Select a language'} options={options} selectedop={language} onSelectedopChange={setLanguage} onColorboxtopChange={setBugfixingstate} />
+        <div className='translate-root'>
+            <div className='ui segment '>
+                <div className='ui form'>
+                    <div className='field'>
+                        <label className='label'>Enter Text</label>
+                        <input value={text} onChange={(e) => { setText(e.target.value) }} placeholder={`Type ${language.label} text here`} />
+                    </div>
+                </div>
+                <div className='translate-dropdown'>
+                    <Dropdown
+                        selectionlabel={'Select a language'}
+                        options={options}
+                        selectedop={language}
+                        onSelectedopChange={setLanguage}
+                        onColorboxtopChange={setBugfixingstate}
+                    />
+                </div>
             </div>
         </div>
     )
