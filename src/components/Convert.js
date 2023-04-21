@@ -6,25 +6,23 @@ const Convert = ({ language, text }) => {
     const [translatedtext, setTranslatedtext] = useState('');
 
     useEffect(() => {
+        const timeoutid = setTimeout(() => {
+            (async () => {
+                const res = await axios.post('https://translation.googleapis.com/language/translate/v2', {}, {
+                    params: {
+                        q: text,
+                        target: language.value,
+                        key: 'AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM'
+                    }
+                })
+                setTranslatedtext(res.data.data.translations[0].translatedText);
+                console.log(res.data.data.translations[0].translatedText);
+            })();
+        }, 500)
 
-        const func = async () => {
-            const res = await axios.post('https://translation.googleapis.com/language/translate/v2', {}, {
-                params: {
-                    q: text,
-                    target: language.value,
-                    key: 'AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM'
-                }
-            })
-            setTranslatedtext(res.data.data.translations[0].translatedText);
-            console.log(res.data.data.translations[0].translatedText);
-        }
-
-        const timeoutid = setTimeout(() => { func() }, 500)
         return () => {
             clearTimeout(timeoutid);
         }
-
-
 
     }, [language, text])
 
