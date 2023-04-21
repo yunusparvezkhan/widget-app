@@ -2,6 +2,14 @@
     width: 80%;
 }
 
+.fifty {
+    width: 50%;
+}
+
+.thirty {
+    width: 30%;
+}
+
 .page-header {
     position: relative;
 }
