@@ -12,7 +12,6 @@ const App = () => {
   const [selectedop, setSelectedop] = useState({ label: 'Select', value: '#202020' });
   const [colorboxtop, setColorboxtop] = useState('0px');
 
-
   return (
     <div className="App">
       <center>
