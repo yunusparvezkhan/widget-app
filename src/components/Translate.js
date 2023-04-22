@@ -3,12 +3,12 @@
 import React, { useState } from 'react'
 import Dropdown from './Dropdown'
 import Convert from './Convert'
-import languages from '../data/language-codes.json'
+import languages from '../data/language-codes'
 import '../styles/Translate.css'
 
 
 const Translate = () => {
-    const [language, setLanguage] = useState(languages.arr[8]);
+    const [language, setLanguage] = useState(languages[8]);
     const [bugfixingstate, setBugfixingstate] = useState('0px'); // Ignore this state, this one is made to keep up with the norms of the Dropdown component. Also ignore the prop where this state setter is passed.
     const [text, setText] = useState('');
 
@@ -24,7 +24,7 @@ const Translate = () => {
                 <div className='translate-dropdown'>
                     <Dropdown
                         selectionlabel={'Select a language'}
-                        options={languages.arr}
+                        options={languages}
                         selectedop={language}
                         onSelectedopChange={setLanguage}
                         onColorboxtopChange={setBugfixingstate}
