@@ -5,7 +5,7 @@ const Convert = ({ language, text }) => {
 
     const [translatedtext, setTranslatedtext] = useState('');
     const [debouncedText, setDebouncedtext] = useState('');
-
+    console.log(text)
     useEffect(() => {
         const timeoutid = setTimeout(() => {
             setDebouncedtext(text);
@@ -15,8 +15,7 @@ const Convert = ({ language, text }) => {
             clearTimeout(timeoutid);
         }
 
-    }, [language, text]);
-
+    }, [text]);
 
     useEffect(() => {
         (async () => {
@@ -29,7 +28,7 @@ const Convert = ({ language, text }) => {
             })
             setTranslatedtext(res.data.data.translations[0].translatedText);
         })();
-    }, [debouncedText])
+    }, [debouncedText, language])
 
     return (
         // This is not a form, put this classname for styling purposes only
