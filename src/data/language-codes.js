@@ -876,10 +876,6 @@ const languages = [
         value: "ko-KR"
     },
     {
-        label: "Chinese, Mandarin (Traditional, Taiwan)",
-        value: "zh-TW"
-    },
-    {
         label: "Chinese, Cantonese (Traditional, Hong Kong)",
         value: "yue-Hant-HK"
     },
