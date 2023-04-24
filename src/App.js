@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Route from "./route";
 import Accordion from "./components/accordion";
 import items from "./data/widget-data";
 import Search from "./components/Search";
@@ -20,34 +21,45 @@ const App = () => {
         <button onClick={() => { window.location.pathname = '/dropdown' }} >Dropdown</button>
         <button onClick={() => { window.location.pathname = '/translate' }} >Translate</button>
         <div>
-          {window.location.pathname === '/' ? <div className='eighty page-body' >
-            <h1>Search</h1>
-            <Search />
-          </div> : ''}
 
-          {window.location.pathname === '/search' ? <div className='eighty page-body' >
-            <h1>Search</h1>
-            <Search />
-          </div> : ''}
+          <Route path='/' >
+            <div className='eighty page-body' >
+              <h1>Search</h1>
+              <Search />
+            </div>
+          </Route>
 
-          {window.location.pathname === '/accordion' ? <div className='eighty page-body'>
-            <h1 className='page-header'>Srimad Bhagavatam Slokas</h1>
-            <Accordion items={items} />
-          </div> : ''}
+          <Route path='/search'>
+            <div className='eighty page-body' >
+              <h1>Search</h1>
+              <Search />
+            </div>
+          </Route>
 
-          {window.location.pathname === '/dropdown' ?
+          <Route path='/accordion'>
+            <div className='eighty page-body'>
+              <h1 className='page-header'>Srimad Bhagavatam Slokas</h1>
+              <Accordion items={items} />
+            </div>
+          </Route>
+
+          <Route path='/dropdown'>
             <div className="eighty page-body">
               <h1>Dropdown</h1>
               <div className='ui segment' >
                 <Dropdown selectionlabel={'Select an Option'} options={dropdownoptions} selectedop={selectedop} onSelectedopChange={setSelectedop} onColorboxtopChange={setColorboxtop} />
               </div>
               <div className='color-box' style={{ backgroundColor: selectedop.value, top: colorboxtop }}></div>
-            </div> : ''}
+            </div>
+          </Route>
 
-          {window.location.pathname === '/translate' ? <div className='fifty page-body'>
-            <h1 className='page-header'>Translate</h1>
-            <Translate />
-          </div> : ''}
+          <Route path='/translate'>
+            <div className='fifty page-body'>
+              <h1 className='page-header'>Translate</h1>
+              <Translate />
+            </div>
+          </Route>
+
         </div>
       </center>
     </div>
