@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from "./components/Header";
 import Route from "./route";
 import Accordion from "./components/accordion";
 import items from "./data/widget-data";
@@ -16,12 +17,7 @@ const App = () => {
   return (
     <div className="App">
       <center>
-        <div className="ui secondary pointing menu">
-          <a href='/search'><button>Search</button></a>
-          <a href='/sb-slokas'><button>ŚB Slokas</button></a>
-          <a href='/dropdown'><button>Dropdown</button></a>
-          <a href='/translate'><button>Translate</button></a>
-        </div >
+        <Header />
         <div>
 
           <Route path='/' >
@@ -38,7 +34,7 @@ const App = () => {
             </div>
           </Route>
 
-          <Route path='/accordion'>
+          <Route path='/sb-slokas'>
             <div className='eighty page-body'>
               <h1 className='page-header'>Srimad Bhagavatam Slokas</h1>
               <Accordion items={items} />
