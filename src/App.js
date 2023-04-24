@@ -16,10 +16,12 @@ const App = () => {
   return (
     <div className="App">
       <center>
-        <button onClick={() => { window.location.pathname = '/search' }} >Search</button>
-        <button onClick={() => { window.location.pathname = '/accordion' }} >ŚB Slokas</button>
-        <button onClick={() => { window.location.pathname = '/dropdown' }} >Dropdown</button>
-        <button onClick={() => { window.location.pathname = '/translate' }} >Translate</button>
+        <div className="ui secondary pointing menu">
+          <a href='/search'><button>Search</button></a>
+          <a href='/sb-slokas'><button>ŚB Slokas</button></a>
+          <a href='/dropdown'><button>Dropdown</button></a>
+          <a href='/translate'><button>Translate</button></a>
+        </div >
         <div>
 
           <Route path='/' >
@@ -61,8 +63,8 @@ const App = () => {
           </Route>
 
         </div>
-      </center>
-    </div>
+      </center >
+    </div >
   );
 }
 
