@@ -5,7 +5,6 @@ const Route = ({ path, children }) => {
 
     useEffect(() => {
         const onLocationChange = () => {
-            console.log('popstate');
             setActivepage(window.location.pathname) // Only for re rendering the component
         }
         window.addEventListener('popstate', onLocationChange);
