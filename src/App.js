@@ -9,8 +9,8 @@ import dropdownoptions from './data/Dropdown-data.js'
 import Translate from "./components/Translate";
 import './styles/StyleLib.css'
 
+
 const App = () => {
-  const [activepage, setActivepage] = useState('search');
   const [selectedop, setSelectedop] = useState({ label: 'Select', value: '#202020' });
   const [colorboxtop, setColorboxtop] = useState('0px');
 
