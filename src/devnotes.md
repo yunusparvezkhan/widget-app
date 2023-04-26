@@ -57,3 +57,6 @@ Version 3 of the widget app contains another page called the Dropdown page. In t
 
 ## Version 4
 Version 4 of the widget app now contains another page called the Translate page. User can put any text in any language in the input field of this page and can select a language to see the put text's translation on that selected language. This widget is very straight forward, but usefull in a lot of sense.
+
+## Version 5
+On this update the app got a new header and React Router in place, rather than plain functions for routing. The title and icon are updated and a credit for the icon is given. All other functionalities remained unchanged.
