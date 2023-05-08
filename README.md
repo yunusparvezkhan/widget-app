@@ -35,6 +35,7 @@ Widget App is a very simple practice app of React Hooks systems. Simply there wi
 
 `Example` => `v4 echo mic 1`
 
+This Commit title repressents that while Version 4 of the app is in Development phase, devnotes is updated for some announcement/notification and the index of such announcement/notification is 1.
 
 ### On Readme.md update
 
@@ -165,6 +166,6 @@ To install the widget-app in your local development setup, please follow the nex
 <br><br>
 
 
-This Commit title repressents that while Version 4 of the app is in Development phase, devnotes is updated for some announcement/notification and the index of such announcement/notification is 1.
+
 
 
